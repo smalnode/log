@@ -130,3 +130,8 @@ AngularJS: Explicitly use injector
 vscode go install tools failed:
 Fixed it by mkdir -p $GOPATH/src/golang.org/x/ and cd into this DIR :
 git clone https://github.com/golang/tools.git
+
+lantern.exe -addr 0.0.0.0:8787 -startup
+
+#vs code extensions location 
+$USERPROFILE$/.vscode/
