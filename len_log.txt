@@ -125,3 +125,8 @@ gnome-session --version
 AngularJS: Explicitly use injector
   injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires]);
   let car = injector.get(Car);
+
+
+vscode go install tools failed:
+Fixed it by mkdir -p $GOPATH/src/golang.org/x/ and cd into this DIR :
+git clone https://github.com/golang/tools.git
