@@ -1,0 +1,7 @@
+select ... lock in share mode; S
+select ... for update; X
+
+lock record -> lock index -> lock cluster index 
+-> no cluster index -> lock default cluster index
+
+record lock + gap lock => Next-Key lock
