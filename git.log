@@ -1,0 +1,7 @@
+#set proxy
+set http_proxy=127.0.0.1:49291
+set https_proxy=127.0.0.1:49291
+
+#unset
+set http_proxy=
+set https_proxy=

@@ -1,0 +1,6 @@
+#eclipse -> alt+enter -> deployment assembly
+source folder -> WEB-INF/classes
+web content directory -> /
+reference jar -> WEB-INF/lib
+
+

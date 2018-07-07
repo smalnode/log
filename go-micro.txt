@@ -1,0 +1,34 @@
+download consul binary
+https://www.consul.io/downloads.html
+
+download protoc binary
+https://github.com/google/protobuf/releases
+
+go get -u -v github.com/micro/micro
+go get -u github.com/golang/protobuf/proto
+go get -u github.com/golang/protobuf/protoc-gen-go
+go get -u -v github.com/micro/protoc-gen-micro
+go get -u github.com/micro/protoc-gen-micro
+
+// create a micro service in gopath
+micro new github.com/smalnode/hyper --type="srv"
+
+protoc --proto_path=. --go_out=. --micro_out=. proto/example/example.proto
+
+// run consul registry
+consul agent --dev
+
+// run micro web site for call api
+micro web
+
+micro list services
+micro get service go.micro.srv.hyper
+micro query go.micro.srv.hyper Gerrting.Hello '{"name":"world"}'
+
+pubsub
+publish one message, send to all subscriber
+
+// go cmd wait for signal
+ch := make(chan os.Signal, 1)
+signal.Notify(ch, syscall.SIGTERM, syscall.SIGINT, syscall.SIGKILL)
+log.Logf("Received signal %s", <-ch)

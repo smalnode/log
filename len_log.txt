@@ -135,3 +135,6 @@ lantern.exe -addr 0.0.0.0:8787 -startup
 
 #vs code extensions location 
 $USERPROFILE$/.vscode/
+
+#vim internal path variable
+let $PATH.='C:\devkit\python35'
